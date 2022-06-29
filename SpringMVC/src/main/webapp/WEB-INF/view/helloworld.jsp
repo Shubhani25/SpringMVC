@@ -13,5 +13,8 @@
 	<br><br>
 	The message: ${message}
 	
+	<form action="processThree" method="GET">
+	</form>
+	
 </body>
 </html>

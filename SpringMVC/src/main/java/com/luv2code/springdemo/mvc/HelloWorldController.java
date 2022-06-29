@@ -3,10 +3,12 @@ package com.luv2code.springdemo.mvc;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import jakarta.servlet.http.HttpServletRequest;
 
 @Controller
+@RequestMapping("/hello")
 public class HelloWorldController {
 
 	@RequestMapping("/showForm")
@@ -28,6 +30,19 @@ public class HelloWorldController {
 		theName = theName.toUpperCase();
 		//create the message
 		String result = "Yo! "+theName;
+		//add message to model
+		model.addAttribute("message", result);
+		
+		return "helloworld";
+	}
+	
+	
+	@RequestMapping("/processFormThree")
+	public String processThree(@RequestParam ("studentName") String theName, Model model) {		
+		//convert data to caps
+		theName = theName.toUpperCase();
+		//create the message
+		String result = "Hey! "+theName;
 		//add message to model
 		model.addAttribute("message", result);
 		

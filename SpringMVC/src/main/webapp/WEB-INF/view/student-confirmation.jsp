@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Student COnfirmation Page</title>
+<title>Student Confirmation Page</title>
 </head>
 <body>
 
